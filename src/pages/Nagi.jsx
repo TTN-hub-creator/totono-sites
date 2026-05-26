@@ -2,6 +2,19 @@ import { facilities } from '../data/siteData'
 import FeatureCard from '../components/FeatureCard'
 import CTASection from '../components/CTASection'
 import heroHall from '../assets/images/nagi/hero-hall.jpg'
+import imgReception from '../assets/images/nagi/reception.jpg'
+import imgDining from '../assets/images/nagi/dining.jpg'
+import imgBath from '../assets/images/nagi/bath.jpg'
+import imgGarden from '../assets/images/nagi/garden.jpg'
+import imgExterior from '../assets/images/nagi/exterior.jpg'
+
+const facilityPhotos = [
+  { src: imgReception, title: '受付', description: '温かみのある照明と花が迎えるエントランス' },
+  { src: imgDining, title: 'ダイニング', description: '毎日の食事が楽しみになる、明るいダイニング' },
+  { src: imgBath, title: '浴室', description: '安心して入浴できる、広々とした浴室' },
+  { src: imgGarden, title: '庭', description: '四季の緑を感じながら過ごせる中庭' },
+  { src: imgExterior, title: '外観', description: '光と緑に包まれた、穏やかな施設外観' },
+]
 
 const nagi = facilities.find((facility) => facility.id === 'nagi')
 
@@ -64,6 +77,26 @@ export default function Nagi() {
               description={feature.description}
               color={nagi.color}
             />
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <p className="mb-3 text-[11px] uppercase tracking-[0.3em] text-[#4A7B8C]">
+          Facility
+        </p>
+        <h2 className="mb-12 font-serif text-3xl font-medium text-[#2f332f]">
+          施設・設備
+        </h2>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {facilityPhotos.map(({ src, title, description }) => (
+            <div key={title} className="overflow-hidden rounded-3xl border border-[#e8e2d5] bg-white">
+              <img src={src} alt={title} className="h-56 w-full object-cover" />
+              <div className="p-7">
+                <h3 className="font-serif text-lg text-[#2f332f]">{title}</h3>
+                <p className="mt-2 text-sm leading-7 text-[#6f6b63]">{description}</p>
+              </div>
+            </div>
           ))}
         </div>
       </section>

@@ -2,6 +2,15 @@ import { facilities } from '../data/siteData'
 import FeatureCard from '../components/FeatureCard'
 import CTASection from '../components/CTASection'
 import heroExterior from '../assets/images/nest-shimada/hero-exterior.jpg'
+import imgCorridor from '../assets/images/nest-shimada/corridor.jpg'
+import imgWashroom from '../assets/images/nest-shimada/washroom.jpg'
+import imgRoom from '../assets/images/nest-shimada/room.jpg'
+
+const facilityPhotos = [
+  { src: imgCorridor, title: '廊下', description: '清潔感と安全を両立した、ゆとりある廊下' },
+  { src: imgWashroom, title: '洗面スペース', description: '使いやすさを大切にした、明るい洗面スペース' },
+  { src: imgRoom, title: '居室', description: '木のぬくもりと光あふれる、プライベートな居室' },
+]
 
 const nest = facilities.find((facility) => facility.id === 'nest-shimada')
 
@@ -64,6 +73,26 @@ export default function NestShimada() {
               description={feature.description}
               color={nest.color}
             />
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <p className="mb-3 text-[11px] uppercase tracking-[0.3em] text-[#6F826F]">
+          Facility
+        </p>
+        <h2 className="mb-12 font-serif text-3xl font-medium text-[#2f332f]">
+          居室・共用設備
+        </h2>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {facilityPhotos.map(({ src, title, description }) => (
+            <div key={title} className="overflow-hidden rounded-3xl border border-[#e8e2d5] bg-white">
+              <img src={src} alt={title} className="h-56 w-full object-cover" />
+              <div className="p-7">
+                <h3 className="font-serif text-lg text-[#2f332f]">{title}</h3>
+                <p className="mt-2 text-sm leading-7 text-[#6f6b63]">{description}</p>
+              </div>
+            </div>
           ))}
         </div>
       </section>

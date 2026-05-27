@@ -1,38 +1,12 @@
 import { Link } from 'react-router-dom'
-import { site, facilities } from '../data/siteData'
+import { facilities } from '../data/siteData'
 import CTASection from '../components/CTASection'
+import HomeHero from '../components/HomeHero'
 
 export default function Home() {
   return (
     <main>
-      <section className="px-6 py-24 md:py-36">
-        <div className="mx-auto max-w-6xl">
-          <p className="mb-5 text-[11px] uppercase tracking-[0.3em] text-[#9E7B5A]">
-            {site.name}
-          </p>
-          <h1 className="max-w-3xl font-serif text-4xl font-medium leading-relaxed tracking-wide text-[#2f332f] md:text-5xl md:leading-relaxed">
-            {site.tagline}
-          </h1>
-          <p className="mt-8 max-w-2xl whitespace-pre-line text-base leading-8 text-[#6f6b63]">
-            {site.description}
-          </p>
-
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a
-              href="#facilities"
-              className="inline-block rounded-full bg-[#2f332f] px-8 py-3 text-center text-xs tracking-widest text-white"
-            >
-              施設を見る
-            </a>
-            <a
-              href="mailto:info@totono-lab.jp"
-              className="inline-block rounded-full border border-[#2f332f]/30 px-8 py-3 text-center text-xs tracking-widest text-[#2f332f]"
-            >
-              お問い合わせ
-            </a>
-          </div>
-        </div>
-      </section>
+      <HomeHero />
 
       <div className="mx-auto max-w-6xl px-6">
         <div className="h-px bg-[#e8e2d5]" />

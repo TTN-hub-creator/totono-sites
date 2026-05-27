@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function CTASection({
   title = 'まずはお気軽にご相談ください。',
   description = '見学予約、資料請求、ご相談など、ご家族の状況に合わせてご案内します。',
@@ -17,18 +19,18 @@ export default function CTASection({
           {description}
         </p>
         <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="rounded-full bg-[#d8c6a3] px-8 py-3 text-sm font-medium tracking-widest text-[#2f332f]"
           >
             {primaryLabel}
-          </a>
-          <a
-            href="mailto:info@totono-lab.jp"
+          </Link>
+          <Link
+            to="/contact"
             className="rounded-full border border-white/30 px-8 py-3 text-sm font-medium tracking-widest text-white"
           >
             {secondaryLabel}
-          </a>
+          </Link>
         </div>
       </div>
     </section>

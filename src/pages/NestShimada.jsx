@@ -1,4 +1,5 @@
 import { facilities } from '../data/siteData'
+import { CONTACT_FORM_URL } from '../config/links'
 import FeatureCard from '../components/FeatureCard'
 import CTASection from '../components/CTASection'
 import heroExterior from '../assets/images/nest-shimada/hero-exterior.jpg'
@@ -32,7 +33,7 @@ export default function NestShimada() {
               2026年春、島田に新しい暮らしの拠点が生まれます。
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a href="#contact" className="rounded-full bg-[#6F826F] px-8 py-3 text-center text-xs tracking-widest text-white">
+              <a href={CONTACT_FORM_URL} target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#6F826F] px-8 py-3 text-center text-xs tracking-widest text-white">
                 資料請求
               </a>
               <a href="#recruit" className="rounded-full border border-[#6F826F]/40 px-8 py-3 text-center text-xs tracking-widest text-[#6F826F]">

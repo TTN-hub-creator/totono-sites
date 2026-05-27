@@ -46,7 +46,7 @@ export const facilities = [
     id: 'nest-shimada',
     path: '/nest-shimada',
     name: 'Totono Nest Shimada',
-    type: '高齢者向け住まい',
+    type: 'グループホーム',
     location: '静岡県島田市',
     catchcopy: '新しい暮らしの巣を、島田につくる。',
     description:

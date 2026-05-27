@@ -1,4 +1,5 @@
 import { facilities } from '../data/siteData'
+import { CONTACT_FORM_URL } from '../config/links'
 import FeatureCard from '../components/FeatureCard'
 import CTASection from '../components/CTASection'
 import heroHall from '../assets/images/nagi/hero-hall.jpg'
@@ -36,7 +37,7 @@ export default function Nagi() {
               その人らしい時間が、ゆるやかに整う住まいです。
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a href="#contact" className="rounded-full bg-[#4A7B8C] px-8 py-3 text-center text-xs tracking-widest text-white">
+              <a href={CONTACT_FORM_URL} target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#4A7B8C] px-8 py-3 text-center text-xs tracking-widest text-white">
                 見学予約
               </a>
               <a href="#features" className="rounded-full border border-[#4A7B8C]/40 px-8 py-3 text-center text-xs tracking-widest text-[#4A7B8C]">

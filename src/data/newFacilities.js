@@ -30,7 +30,7 @@ export const newFacilities = [
   {
     id: 'kanon',
     path: null,
-    name: '花音 Kanon',
+    name: 'Totono Kanon',
     nameJa: '花音',
     type: 'グループホーム / 暮らしのケア',
     location: '静岡県',
@@ -39,6 +39,20 @@ export const newFacilities = [
       '一人ひとりの毎日が穏やかに続いていくように、やさしい時間を育みます。',
     color: '#A87B6A',
     colorLight: '#F5EDE9',
+    comingSoon: true,
+  },
+  {
+    id: 'tsumugi',
+    path: null,
+    name: 'Totono Tsumugi',
+    nameJa: 'つむぎの家',
+    type: '小規模多機能ホーム',
+    location: '静岡県',
+    catchcopy: '地域の中で、通い・泊まり・訪問をやわらかくつなぐ小規模多機能ホーム。',
+    description:
+      'その人らしい暮らしが、住み慣れた場所で続いていくように支えます。',
+    color: '#9A8F6F',
+    colorLight: '#F2EFE6',
     comingSoon: true,
   },
 ]

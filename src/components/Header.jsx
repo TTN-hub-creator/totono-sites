@@ -43,6 +43,9 @@ export default function Header() {
               {facility.name}
             </NavLink>
           ))}
+          <NavLink to="/recruit" className={linkClass}>
+            Recruit
+          </NavLink>
         </nav>
 
         <button
@@ -81,6 +84,13 @@ export default function Header() {
               {facility.name}
             </NavLink>
           ))}
+          <NavLink
+            to="/recruit"
+            className={linkClass}
+            onClick={() => setOpen(false)}
+          >
+            Recruit
+          </NavLink>
         </nav>
       )}
     </header>

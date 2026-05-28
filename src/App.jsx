@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Nagi from './pages/Nagi'
 import NestShimada from './pages/NestShimada'
 import Contact from './pages/Contact'
+import InstagramOfficialEmbed from './components/InstagramOfficialEmbed'
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/nest-shimada" element={<NestShimada />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <InstagramOfficialEmbed />
         <Footer />
       </div>
     </BrowserRouter>

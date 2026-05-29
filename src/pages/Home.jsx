@@ -6,7 +6,11 @@ import HomeHero from '../components/HomeHero'
 
 const allFacilities = [...facilities, ...newFacilities]
 
+const telHref = (tel) => 'tel:' + tel.replace(/-/g, '')
+
 export default function Home() {
+  const facilitiesWithLocation = allFacilities.filter((f) => f.location)
+
   return (
     <main>
       <HomeHero />
@@ -46,6 +50,14 @@ export default function Home() {
                 <p className="mt-0.5 text-sm text-[#8a8880]">{facility.nameJa}</p>
               )}
               <p className="mt-2 text-sm text-[#8a8880]">{facility.location}</p>
+              {facility.tel && (
+                <a
+                  href={telHref(facility.tel)}
+                  className="mt-1 text-xs text-[#8a8880] transition-colors hover:text-[#9E7B5A]"
+                >
+                  TEL {facility.tel}
+                </a>
+              )}
               <p className="mt-6 font-serif text-xl leading-relaxed text-[#2f332f]">
                 {facility.catchcopy}
               </p>
@@ -71,6 +83,64 @@ export default function Home() {
       </section>
 
       <CTASection />
+
+      <section className="bg-[#f3efe5] py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <p className="mb-3 text-[11px] uppercase tracking-[0.3em] text-[#9E7B5A]">
+            Group Facilities
+          </p>
+          <h2 className="mb-12 font-serif text-3xl font-medium text-[#2f332f]">
+            拠点一覧
+          </h2>
+
+          <div className="grid gap-4 md:grid-cols-2">
+            {facilitiesWithLocation.map((facility) => (
+              <div
+                key={facility.id}
+                className="rounded-2xl border border-[#e5dfd3] bg-[#faf7f1] p-6"
+              >
+                <p
+                  className="mb-2 text-[10px] uppercase tracking-[0.2em]"
+                  style={{ color: facility.color }}
+                >
+                  {facility.type}
+                </p>
+                <h3 className="font-serif text-lg font-medium text-[#2f332f]">
+                  {facility.path ? (
+                    <Link
+                      to={facility.path}
+                      className="underline-offset-4 hover:underline"
+                    >
+                      {facility.name}
+                    </Link>
+                  ) : (
+                    facility.name
+                  )}
+                </h3>
+                {facility.nameJa && facility.nameJa !== facility.name && (
+                  <p className="mt-0.5 text-sm text-[#8a8880]">{facility.nameJa}</p>
+                )}
+                <div className="mt-3 space-y-1">
+                  <p className="text-sm text-[#8a8880]">{facility.location}</p>
+                  {facility.tel && (
+                    <a
+                      href={telHref(facility.tel)}
+                      className="block text-sm text-[#8a8880] transition-colors hover:text-[#9E7B5A]"
+                    >
+                      TEL {facility.tel}
+                    </a>
+                  )}
+                </div>
+                {facility.comingSoon && (
+                  <span className="mt-4 inline-flex items-center rounded-full border border-[#d4c9b5] bg-white/60 px-4 py-1 text-[10px] tracking-widest text-[#b0a898]">
+                    Coming soon
+                  </span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

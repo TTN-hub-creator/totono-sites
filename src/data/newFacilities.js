@@ -5,7 +5,8 @@ export const newFacilities = [
     name: 'Totono Nest Yaizu',
     nameJa: 'Totono Nest 焼津',
     type: 'グループホーム',
-    location: '静岡県焼津市',
+    location: '静岡県焼津市西小川2-9-1',
+    tel: '054-629-5550',
     catchcopy: '焼津エリアに広がる、Totono Nestシリーズの新たな拠点。',
     description:
       '地域に根ざしながら、安心と心地よさのある暮らしを支えます。',
@@ -19,7 +20,8 @@ export const newFacilities = [
     name: 'Totono Nest Fujieda',
     nameJa: 'Totono Nest 藤枝',
     type: 'グループホーム',
-    location: '静岡県藤枝市',
+    location: '静岡県藤枝市五十海1-14-23',
+    tel: '054-631-7761',
     catchcopy: '介護と暮らしのあいだに、整う時間を届ける住まいへ。',
     description:
       '藤枝エリアに展開予定のTotono Nestシリーズ。穏やかな日々が重なる場所をつくります。',
@@ -33,7 +35,8 @@ export const newFacilities = [
     name: 'Totono Kanon',
     nameJa: '花音',
     type: 'グループホーム / 暮らしのケア',
-    location: '静岡県',
+    location: '静岡県静岡市葵区水道町126-1',
+    tel: '054-659-8700',
     catchcopy: '小さな暮らしの音に寄り添う、家庭的なケアの場所。',
     description:
       '一人ひとりの毎日が穏やかに続いていくように、やさしい時間を育みます。',
@@ -47,7 +50,8 @@ export const newFacilities = [
     name: 'Totono Tsumugi',
     nameJa: 'つむぎの家',
     type: '小規模多機能ホーム',
-    location: '静岡県',
+    location: '静岡県藤枝市五十海1-14-23',
+    tel: '054-631-7762',
     catchcopy: '地域の中で、通い・泊まり・訪問をやわらかくつなぐ小規模多機能ホーム。',
     description:
       'その人らしい暮らしが、住み慣れた場所で続いていくように支えます。',

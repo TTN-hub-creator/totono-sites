@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://totono-sites.vercel.app/sitemap.xml
+Sitemap: https://totonolab.jp/sitemap.xml

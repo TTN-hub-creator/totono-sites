@@ -19,4 +19,30 @@ export const FACILITIES_INFO = [
     address: '島田市道悦5丁目1-156',
     phone: '054-739-3236',
   },
+  {
+    id: 'nest-yaizu',
+    name: 'Totono Nest Yaizu',
+    address: '焼津市西小川2-9-1',
+    phone: '054-629-5550',
+  },
+  {
+    id: 'nest-fujieda',
+    name: 'Totono Nest Fujieda',
+    address: '藤枝市五十海1-14-23',
+    phone: '054-631-7761',
+  },
+  {
+    id: 'tsumugi',
+    name: 'Totono Tsumugi',
+    nameJa: 'つむぎの家',
+    address: '藤枝市五十海1-14-23',
+    phone: '054-631-7762',
+  },
+  {
+    id: 'kanon',
+    name: 'Totono Kanon',
+    nameJa: '花音',
+    address: '静岡市葵区水道町126-1',
+    phone: '054-659-8700',
+  },
 ]

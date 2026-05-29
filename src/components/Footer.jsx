@@ -53,7 +53,7 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div className="mt-12 grid gap-8 border-t border-[#e8e2d5] pt-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-8 border-t border-[#e8e2d5] pt-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col gap-2">
             <span className="text-[10px] uppercase tracking-[0.2em] text-[#c0b9ac]">
               Operating Office
@@ -78,6 +78,9 @@ export default function Footer() {
                 Facility
               </span>
               <p className="text-sm font-medium text-[#2f332f]">{facility.name}</p>
+              {facility.nameJa && (
+                <p className="text-xs text-[#8a8880]">{facility.nameJa}</p>
+              )}
               <p className="text-xs leading-6 text-[#8a8880]">{facility.address}</p>
               <a
                 href={telHref(facility.phone)}

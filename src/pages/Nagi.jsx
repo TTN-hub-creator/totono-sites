@@ -1,5 +1,4 @@
 import { facilities } from '../data/siteData'
-import { CONTACT_FORM_URL } from '../config/links'
 import FeatureCard from '../components/FeatureCard'
 import CTASection from '../components/CTASection'
 import heroHall from '../assets/images/nagi/hero-hall.jpg'
@@ -8,6 +7,7 @@ import imgDining from '../assets/images/nagi/dining.jpg'
 import imgBath from '../assets/images/nagi/bath.jpg'
 import imgGarden from '../assets/images/nagi/garden.jpg'
 import imgExterior from '../assets/images/nagi/exterior.jpg'
+import { Link } from 'react-router-dom'
 
 const facilityPhotos = [
   { src: imgReception, title: '受付', description: '温かみのある照明と花が迎えるエントランス' },
@@ -37,9 +37,9 @@ export default function Nagi() {
               その人らしい時間が、ゆるやかに整う住まいです。
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a href={CONTACT_FORM_URL} target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#4A7B8C] px-8 py-3 text-center text-xs tracking-widest text-white">
+              <Link to="/contact" className="rounded-full bg-[#4A7B8C] px-8 py-3 text-center text-xs tracking-widest text-white">
                 見学予約
-              </a>
+              </Link>
               <a href="#features" className="rounded-full border border-[#4A7B8C]/40 px-8 py-3 text-center text-xs tracking-widest text-[#4A7B8C]">
                 Nagiを知る
               </a>

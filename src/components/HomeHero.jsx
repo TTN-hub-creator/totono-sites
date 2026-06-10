@@ -1,6 +1,6 @@
 import homeHero from '../assets/images/brand/home-hero.jpg'
 import homeLeaf from '../assets/images/brand/home-leaf.jpg'
-import { CONTACT_FORM_URL } from '../config/links'
+import { Link } from 'react-router-dom'
 
 export default function HomeHero() {
   return (
@@ -21,14 +21,12 @@ export default function HomeHero() {
             日々が気持ちよく整う場所をつくります。
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a
-              href={CONTACT_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/contact"
               className="inline-block rounded-full bg-[#7F947C] px-8 py-3.5 text-center text-xs tracking-[0.2em] text-white transition-colors hover:bg-[#6B7E68]"
             >
               お問い合わせ
-            </a>
+            </Link>
             <a
               href="#facilities"
               className="inline-block rounded-full border border-[#7F947C] px-8 py-3.5 text-center text-xs tracking-[0.2em] text-[#5F745D] transition-colors hover:bg-[#7F947C]/10"

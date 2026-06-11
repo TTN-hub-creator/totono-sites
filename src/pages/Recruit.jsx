@@ -291,9 +291,10 @@ export default function Recruit() {
           <div className="mt-10">
             <Link
               to="/contact"
-              className="inline-block rounded-full bg-[#2f332f] px-10 py-3 text-sm text-white transition hover:opacity-90"
+              style={{ color: '#ffffff' }}
+              className="inline-block rounded-full bg-[#2f332f] px-10 py-3.5 text-sm font-medium tracking-widest text-white transition hover:bg-[#454a44]"
             >
-              採用について問い合わせる
+              お問い合わせ・見学予約フォーム
             </Link>
           </div>
         </div>
